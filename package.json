@@ -1,0 +1,31 @@
+{
+  "name": "evaluation-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrGeisler/Evaluation-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OrGeisler/Evaluation-Project/issues"
+  },
+  "homepage": "https://github.com/OrGeisler/Evaluation-Project#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "@types/bootstrap": "^5.2.5",
+    "@types/handlebars": "^4.1.0",
+    "@types/handlebars-helpers": "^0.5.3",
+    "@types/jest": "^29.2.0",
+    "@types/jquery": "^3.5.14",
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "popover": "^2.4.1",
+    "urllib": "^3.3.1"
+  }
+}
