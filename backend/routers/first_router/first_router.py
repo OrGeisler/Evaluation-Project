@@ -1,4 +1,4 @@
-from fastapi import APIRouter,HTTPException
+from fastapi import APIRouter,HTTPException,status
 import requests
 from . import first_router_utils
 from ..db_utils import querys
@@ -7,7 +7,7 @@ from ..db_utils.db_proxy import db_proxy
 firstRoute = APIRouter()
 
 
-@firstRoute.get('/players')
+@firstRoute.get('/players',status_code=status.HTTP_200_OK)
 def root(teamName,year):
 
     ## put the http call in the utils to catc the error

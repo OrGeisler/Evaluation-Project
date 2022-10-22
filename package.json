@@ -27,5 +27,8 @@
     "jquery": "^3.6.1",
     "popover": "^2.4.1",
     "urllib": "^3.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.2.1"
   }
 }
