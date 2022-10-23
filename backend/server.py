@@ -1,18 +1,19 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,status
 import uvicorn
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from routers.first_router.first_router import firstRoute
+from routers.recipes_router.recipes import recipesRoute
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
 app.mount("/client/build", StaticFiles(directory="./client/build"), name="build")
-app.include_router(firstRoute)
+app.include_router(recipesRoute)
 
 
-@app.get('/sanity')
+@app.get('/sanity', response_class= JSONResponse , status_code= status.HTTP_200_OK)
 def root():
-    return {"message":"Server is up and running"}
+    return {"message":"OK"}
 
 
 @app.get('/')

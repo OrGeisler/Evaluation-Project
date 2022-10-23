@@ -7,7 +7,7 @@ class db_proxy:
                                                 host='localhost',
                                                 user='root',
                                                 password="",
-                                                db="choose_db",
+                                                db="recipes_app",
                                                 charset="utf8",
                                                 cursorclass=pymysql.cursors.DictCursor
                                             )

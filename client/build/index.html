@@ -15,8 +15,24 @@
 </head>
 <body style="background-color: #FFD151">
   <div class="container" >
-        <button type="button" style="background-color: #D3B88C" class="btn fw-bold show-team mt-1" >First Buttom</button>
-        <button type="button" style="background-color: #D3B88C" class="btn fw-bold show-dream-team mt-1" >Second buttom</button>
+    <div class="form-inline" >
+      <div class="row">
+        <div class="mb-3 mt-3">
+          <input type="email" class="form-control" id="ingredient" placeholder="Enter Ingredient" name="ingredient">
+        </div>
+        <div class="form-check col">
+          <label class="form-check-label mt-4">
+            <input class="form-check-input" id="gluten-Free" type="checkbox"> Gluten Free
+          </label>
+        </div>
+        <div class="form-check col">
+          <label class="form-check-label mt-4">
+            <input class="form-check-input" id="dairy-Free" type="checkbox"> Dairy Free
+          </label>
+        </div>
+        <button type="button" style="background-color: #D3B88C" class="btn fw-bold show-team mt-1" >Search</button>
+      </div>
+    </div>
       <div class="players-container row m-3"></div>
   </div>
     <script src="client/build/jsfiles/data-module.js"></script>

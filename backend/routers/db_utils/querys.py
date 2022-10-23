@@ -1,16 +1,10 @@
-sql_insert_type =    """
-                           INSERT IGNORE into type (name) 
-                           values (%s)
-                           """
-sql_get_pokemon_id =    """
-                        SELECT p.id
-                        FROM pokemon p
-                        WHERE p.name = %s
-                        """
+sql_get_gluten_free_ingredients = """
+                                    SELECT g.name
+                                    FROM gluten_ingredients g
+                                    """
 
-sql_delete_pokemon_of_trainer = """
-                                DELETE FROM owned_by 
-                                WHERE trainer_name = %s
-                                AND pokemon_id = %s
-                                """
+sql_get_dairy_free_ingredients = """
+                                    SELECT d.name
+                                    FROM dairy_ingredients d
+                                    """
 
