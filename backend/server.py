@@ -21,4 +21,4 @@ def root():
     return FileResponse('./client/build/index.html')
 
 if __name__ == "__main__":
-    uvicorn.run("server:app",host="localhost", port=8000,reload=True)
+    uvicorn.run("server:app",host="localhost", port=8001,reload=True)

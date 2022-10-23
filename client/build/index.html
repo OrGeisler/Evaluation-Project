@@ -22,42 +22,40 @@
         </div>
         <div class="form-check col">
           <label class="form-check-label mt-4">
-            <input class="form-check-input" id="gluten-Free" type="checkbox"> Gluten Free
+            <input class="form-check-input gluten" type="checkbox"> Gluten Free
           </label>
         </div>
         <div class="form-check col">
           <label class="form-check-label mt-4">
-            <input class="form-check-input" id="dairy-Free" type="checkbox"> Dairy Free
+            <input class="form-check-input dairy" type="checkbox"> Dairy Free
           </label>
         </div>
-        <button type="button" style="background-color: #D3B88C" class="btn fw-bold show-team mt-1" >Search</button>
+        <button type="button" style="background-color: #D3B88C" class="btn fw-bold search mt-1" >Search</button>
       </div>
     </div>
-      <div class="players-container row m-3"></div>
+      <div class="recipes-container row m-3"></div>
   </div>
     <script src="client/build/jsfiles/data-module.js"></script>
     <script src="client/build/jsfiles/render-module.js"></script>
     <script src="client/build/jsfiles/controller-module.js"></script>
-
+    <script src="client/build/jsfiles/recipe.js"></script>
 </body>
 </html>
 
 
 <!-- Handlebars -->
 
-<!-- <script id="players-template" type="text/x-handlebars-template">
-    {{#each players}}
+<script id="recipes-template" type="text/x-handlebars-template">
+    {{#each recipes}}
     <div class="col-sm-4 mb-3" >
-      <div class="card text-center h-100 " data-id={{id}} >
-        <div class="card-header" style="background-color: #EDB230">{{firstName}} {{lastName}} </div>
-        <div class="card-header" style="background-color: #F8C537" >{{jersey}} </div>
-          <img class = "card-body img-fluid rounded "  style="background-color: #FCDFA6" src= {{picture}} alt="" onerror="this.onerror=null; this.src='https://image.shutterstock.com/image-vector/silhouette-missing-person-stamp-600w-752963539.jpg'">
+      <div class="card text-center h-100 " data-id={{ingredients}} >
+        <div class="card-header" style="background-color: #EDB230">{{title}}</div>
+        <div class="card-header" style="background-color: #F8C537" >{{ingredients}} </div>
+          <img class = "card-body img-fluid rounded "  style="background-color: #FCDFA6" src= {{thumbnail}} alt="" onerror="this.onerror=null; this.src='https://image.shutterstock.com/image-vector/silhouette-missing-person-stamp-600w-752963539.jpg'">
         <div class="card-footer" style="background-color: #EDB230">
-          <div class="mb-2" style="background-color: #F8C537">{{position}}</div>
-          <button type="button" style="background-color: #E77728" class="btn fw-bold show-stats mb-2">Show Stats</button>
-          <button type="button" style="background-color: #E77728" class="btn fw-bold dream-team-add mb-2">Add to DreamTeam</button>
+          <div class="mb-2" style="background-color: #F8C537">{{href}}</div>
         </div>
       </div>
     </div>
     {{/each}}
-</script> -->
+</script>
