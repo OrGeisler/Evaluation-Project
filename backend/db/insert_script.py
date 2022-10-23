@@ -4,20 +4,24 @@ connection = pymysql.connect(
     host="localhost",
     user="root",
     password="",
-    db="db",
+    db="recipes_app",
     charset="utf8",
     cursorclass=pymysql.cursors.DictCursor
 )
 
-# def pokemon_insert():
-#     file = open('poke_data.json')
-#     data = json.load(file)
-#     for pokemon in data:
-#         try:
-#             with connection.cursor() as cursor:
-#                 query = f'INSERT into pokemon (name,height,weight) values ("{pokemon["name"]}","{pokemon["height"]}",{pokemon["weight"]})'
-#                 cursor.execute(query)
-#                 connection.commit()
-#         except:
-#             print("Error")
-#     file.close()
+def table_insert(ingredients_list , table ):
+    for ingredient in ingredients_list:
+        try:
+            with connection.cursor() as cursor:
+                query = f'INSERT into {table} (name) values ("{ingredient}")'
+                cursor.execute(query)
+                connection.commit()
+        except:
+            print("Error")
+
+
+dairy_ingredients = ["Cream","Cheese","Milk","Butter","Creme","Ricotta","Mozzarella","Custard","Cream Cheese"]
+gluten_ingredients = ["Flour","Bread","spaghetti","Biscuits","Beer"]
+
+table_insert(dairy_ingredients,'dairy_ingredients')
+table_insert(gluten_ingredients,'gluten_ingredients')
